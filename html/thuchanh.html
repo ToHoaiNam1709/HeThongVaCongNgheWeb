@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery-3.6.4.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <style>
+       [class*="col-"]{
+            padding: 0px;
+            border: 1px soild gray;
+       }
+       li{width: 150px;}
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            var stt = 1;
+            $("#openDV").click(function(){
+                $("#myModal").modal();
+            }) 
+        function VaildEmail(){
+            var regEmail=/^[a-z_]{3,12}([a-z0-9])*\@(iuh.edu.vn)$/;
+                var email=$("#txtEmail").val();
+            if (regEmail.test(email)==true) {
+                alert("OK rau");
+            } else {
+                alert ("sai roi ba");
+            }
+        }
+            $("#txtEmail").blur(VaildEmail);
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row col-md-12 alert alert-primary">
+            <div class="col-md-3 border-info ">
+                <img src="/img/img2.png" alt="" srcset="" height="100%" width="100%">
+            </div>
+            <div class="col-md-9 text-center text-danger ">
+                <h3>TRUONG DAI HOC CONG NGHIEP TP.HCM</h3>
+                <H5>KHOA CONG NGHE THONG TIN</H5>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <ul class="navbar navbar-nav nav-pills nav-justified navbar-expand-md alert alert-primary">
+                <li class="nav-item text-center text-white "><a href="#" class="nav-link">ITEM x</a></li>
+                <li class="nav-item text-center text-white"><a href="#" class="nav-link" id="openDV">DICH VU</a></li>
+                <li class="nav-item text-center text-white "><a href="#" class="nav-link">ITEM x</a></li>
+                <li class="nav-item text-center text-white "><a href="#" class="nav-link">ITEM x</a></li>
+            </ul>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-4 card-img-bottom">
+                <img src="/img/logo.png" alt="" height="300px" width="300px">
+            </div>
+            <div class="col-md-8">
+                <table class="table table-bordered table-hover table-primary">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>HO TEN</th>
+                            <th>NGAY SINH</th>
+                            <th>QUE QUAN</th>
+                            <th>GHI CHU</th>
+                        </tr>
+                    </thead>
+                    <TBody>
+                        <tr>
+                            <td>1</td>
+                            <td>Tran A</td>
+                            <td>22/12/2012</td>
+                            <td>CAN THO</td>
+                            <td>new</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Le B</td>
+                            <td>11/11/2011</td>
+                            <td>QUANG NAM</td>
+                            <td>cu</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Vo Beo</td>
+                            <td>12/12/2012</td>
+                            <td>Binh Dinh</td>
+                            <td>moi</td>
+                        </tr>
+                    </TBody>
+                </table>
+            </div>
+        </div>
+        <div class="row col-md-10">
+            <div class="modal" tabindex="-1" role="dialog" id="myModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Email address</label>
+                                    <input type="email" class="form-control" id="txtEmail"
+                                    placeholder="name@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Example select</label>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option >1</option>
+                                        <option >2</option>
+                                        <option >3</option>
+                                        <option >4</option>
+                                        <option >5</option>
+                                    </select>
+                                </div>
+                                <div class="form-control">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1"  rows="3">
+
+                                    </textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn- btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
